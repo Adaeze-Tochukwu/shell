@@ -586,7 +586,7 @@ h1 {
   background-image: url(../../images/ceo1.svg);
   width: 599px;
   min-width: 599px;
-  margin-top: 18px;
+  margin-top: 10px;
   position: relative;
   height: 600px;
   background-repeat: none;
@@ -610,8 +610,8 @@ h1 {
 }
 .hero__weld--pic {
   width: 599px;
-  height: 440px;
-  margin-top: -90px;
+  height: 330px;
+  margin-top: 8px;
 }
 .hero__weld--par {
   width: 599px;
@@ -630,8 +630,8 @@ h1 {
 }
 .hero__satelite--pic {
   width: 599px;
-  height: 440px;
-  margin-top: -90px;
+  height: 330px;
+  margin-top: 8px;
 }
 .hero__satelite--tex {
   width: 599px;
@@ -650,8 +650,8 @@ h1 {
 }
 .hero__city--pic {
   width: 599px;
-  height: 440px;
-  margin-top: -90px;
+  height: 330px;
+  margin-top: 8px;
 }
 .hero__city--pa {
   width: 599px;
