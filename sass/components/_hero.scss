@@ -1,0 +1,187 @@
+.hero {
+  width: 599px;
+  min-width: 599px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, min-content);
+
+  &__video {
+    &--para {
+      width: 599px;
+      min-width: 599px;
+      height: 200px;
+      margin-top: -10px;
+      background-color: var(--gray);
+      color: var(--light);
+      // border: 1px red dotted;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 30px;
+      gap: 15px;
+
+      &-underline {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__ceo {
+    background-image: url(../../images/ceo1.svg);
+    width: 599px;
+    min-width: 599px;
+    margin-top: 18px;
+    position: relative;
+    height: 600px;
+    background-repeat: none;
+    color: var(--light);
+
+    &--text {
+      background-color: var(--gamma);
+      opacity: 0.5;
+      position: absolute;
+      bottom: 0;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 200px;
+      padding-left: 30px;
+      padding-right: 30px;
+      gap: 15px;
+
+      &-underline {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__weld {
+    &--pic {
+      // border: 1px blue dotted;
+      width: 599px;
+      height: 440px;
+      margin-top: -90px;
+    }
+
+    &--par {
+      width: 599px;
+      min-width: 599px;
+      height: 200px;
+      background-color: var(--gray);
+      color: var(--light);
+      // border: 1px red dotted;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 30px;
+      gap: 15px;
+
+      &-underline {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__satelite {
+    &--pic {
+      // border: 1px blue dotted;
+      width: 599px;
+      height: 440px;
+      margin-top: -90px;
+    }
+
+    &--tex {
+      width: 599px;
+      min-width: 599px;
+      height: 200px;
+      background-color: var(--skills);
+      color: var(--gamma);
+      // border: 1px red dotted;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 30px;
+      gap: 15px;
+
+      &-underline {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__city {
+    &--pic {
+      // border: 1px blue dotted;
+      width: 599px;
+      height: 440px;
+      margin-top: -90px;
+    }
+
+    &--pa {
+      width: 599px;
+      min-width: 599px;
+      height: 200px;
+      background-color: var(--skills);
+      color: var(--gamma);
+      // border: 1px red dotted;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 30px;
+      gap: 15px;
+
+      &-underline {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    width: 959px;
+    min-width: 959px;
+    border: 1px black dotted;
+    height: 2000px;
+
+    display: grid;
+    grid-template-columns: repeat(2, min-content);
+    grid-template-rows: repeat(3, min-content);
+    gap: 10px;
+    // grid-auto-columns: 300px;
+
+    &__video {
+      grid-column: 1 /-1;
+      grid-row: 1/2;
+      grid-column-start: span 2;
+      width: 959px;
+      min-width: 959px;
+    }
+
+    &__ceo {
+      width: 464.5px;
+      min-width: 464.5px;
+    }
+
+    &__weld {
+      width: 460px;
+      min-width: 460px;
+      height: 600px;
+    }
+  }
+
+  @media screen and (min-width: 960px) {
+    // max-width: 50%;
+    // min-width: 2480px;
+    // border: 1px black dotted;
+    // height: 2000px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, min-content);
+  }
+}
