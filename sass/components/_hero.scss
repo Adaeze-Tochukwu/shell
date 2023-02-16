@@ -7,6 +7,10 @@
   grid-template-rows: repeat(5, min-content);
 
   &__video {
+    video {
+      width: 100%;
+      height: auto;
+    }
     &--para {
       width: 599px;
       min-width: 599px;
@@ -60,6 +64,7 @@
 
   &__weld {
     &--pic {
+      background-image: url(../../images/weld2.svg);
       // border: 1px blue dotted;
       width: 599px;
       height: 330px;
@@ -88,6 +93,7 @@
 
   &__satelite {
     &--pic {
+      background-image: url(../../images/satelite3.svg);
       // border: 1px blue dotted;
       width: 599px;
       height: 330px;
@@ -116,6 +122,7 @@
 
   &__city {
     &--pic {
+      background-image: url(../../images/city4.svg);
       // border: 1px blue dotted;
       width: 599px;
       height: 330px;
@@ -145,43 +152,68 @@
   @media screen and (min-width: 600px) {
     width: 959px;
     min-width: 959px;
-    border: 1px black dotted;
-    height: 2000px;
 
     display: grid;
-    grid-template-columns: repeat(2, min-content);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, min-content);
-    gap: 10px;
-    // grid-auto-columns: 300px;
 
     &__video {
-      grid-column: 1 /-1;
+      grid-column: 1/3;
       grid-row: 1/2;
-      grid-column-start: span 2;
-      width: 959px;
-      min-width: 959px;
+
+      video {
+        width: 100%;
+        height: auto;
+      }
+      &--para {
+        width: 959px;
+        min-width: 959px;
+        height: 200px;
+        margin-top: -10px;
+        background-color: var(--gray);
+        color: var(--light);
+      }
     }
 
     &__ceo {
-      width: 464.5px;
-      min-width: 464.5px;
+      border: 1px red dotted;
+      grid-column: 1/2;
+      grid-row: 2/3;
+
+      background-image: url(../../images/ceo11.svg);
+      width: 474.5px;
+      min-width: 474.5px;
+      position: relative;
+      height: 458px;
+      background-repeat: none;
+      color: var(--light);
     }
 
     &__weld {
-      width: 460px;
-      min-width: 460px;
-      height: 600px;
+      border: 2px blue solid;
+      width: 474.5px;
+      min-width: 474.5px;
+      height: 458px;
+      grid-column: 2/3;
+      grid-row: 2/3;
+
+      &--pic {
+        background-image: url(../../images/weld22.svg);
+        background-repeat: none;
+        // border: 1px blue dotted;
+        width: 474.5px;
+        min-width: 474.5px;
+        height: 258px;
+        // margin-top: 8px;
+      }
+
+      &--par {
+        width: 474.5px;
+        min-width: 474.5px;
+        height: 200px;
+        background-color: var(--gray);
+        color: var(--light);
+      }
     }
-  }
-
-  @media screen and (min-width: 960px) {
-    // max-width: 50%;
-    // min-width: 2480px;
-    // border: 1px black dotted;
-    // height: 2000px;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, min-content);
   }
 }
