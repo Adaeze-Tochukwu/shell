@@ -1,10 +1,7 @@
 .hero {
+  background-color: white;
   width: 599px;
   min-width: 599px;
-
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, min-content);
 
   &__video {
     video {
@@ -149,18 +146,20 @@
     }
   }
 
+  &__small {
+    display: block;
+  }
+
+  &__big {
+    display: none;
+  }
+
   @media screen and (min-width: 600px) {
+    background-color: white;
     width: 959px;
     min-width: 959px;
 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, min-content);
-
     &__video {
-      grid-column: 1/3;
-      grid-row: 1/2;
-
       video {
         width: 100%;
         height: auto;
@@ -175,10 +174,18 @@
       }
     }
 
+    &__tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      // border: 2px black solid;
+      gap: 10px;
+    }
+
     &__ceo {
-      border: 1px red dotted;
+      // border: 1px red dotted;
       grid-column: 1/2;
-      grid-row: 2/3;
+      grid-row: 1/2;
 
       background-image: url(../../images/ceo11.svg);
       width: 474.5px;
@@ -190,21 +197,26 @@
     }
 
     &__weld {
-      border: 2px blue solid;
-      width: 474.5px;
-      min-width: 474.5px;
-      height: 458px;
       grid-column: 2/3;
-      grid-row: 2/3;
+      grid-row: 1/2;
+      height: 458px;
+
+      &--container {
+        // border: 2px blue solid;
+        max-width: 474.5px;
+        min-width: 474.5px;
+        height: 258px;
+        margin: 0;
+      }
 
       &--pic {
         background-image: url(../../images/weld22.svg);
-        background-repeat: none;
-        // border: 1px blue dotted;
-        width: 474.5px;
-        min-width: 474.5px;
-        height: 258px;
-        // margin-top: 8px;
+        background-repeat: no-repeat center;
+        background-size: cover;
+        // border: 3px green solid;
+        width: 100%;
+        // padding-right: 2%;
+        padding-left: 20%;
       }
 
       &--par {
@@ -213,6 +225,281 @@
         height: 200px;
         background-color: var(--gray);
         color: var(--light);
+      }
+    }
+
+    &__satelite {
+      grid-column: 1/2;
+      grid-row: 2/3;
+      height: 458px;
+
+      &--container {
+        // border: 2px purple solid;
+        max-width: 474.5px;
+        min-width: 474.5px;
+        height: 258px;
+        margin: 0;
+      }
+
+      &--pic {
+        background-image: url(../../images/satelite33.svg);
+        // border: 1px blue dotted;
+        background-repeat: no-repeat center;
+        background-size: cover;
+        width: 100%;
+        object-fit: cover;
+        margin-top: -1px;
+        margin-bottom: -64px;
+      }
+
+      &--tex {
+        width: 474.5px;
+        min-width: 474.5px;
+        height: 200px;
+        background-color: var(--skills);
+        color: var(--gamma);
+        // border: 1px red dotted;
+      }
+    }
+
+    &__city {
+      grid-column-end: 2/3;
+      grid-row: 2/3;
+      height: 458px;
+
+      &--container {
+        // border: 2px orange solid;
+        max-width: 474.5px;
+        min-width: 474.5px;
+        height: 258px;
+        margin: 0;
+      }
+
+      &--pic {
+        background-image: url(../../images/city44.svg);
+        // border: 1px blue dotted;
+        background-repeat: no-repeat center;
+        background-size: cover;
+        width: 100%;
+        padding-top: 2%;
+      }
+
+      &--pa {
+        width: 474.5px;
+        min-width: 474.5px;
+        height: 200px;
+        background-color: var(--skills);
+        color: var(--gamma);
+        // border: 1px red dotted;
+      }
+    }
+
+    &__small {
+      display: block;
+    }
+
+    &__big {
+      display: none;
+    }
+
+    @media screen and (min-width: 960px) {
+      background-color: white;
+      width: 100%;
+      min-width: 1240px;
+
+      &__big {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // border: 3px red solid;
+      }
+
+      &__vidceo {
+        display: flex;
+        width: 1240px;
+        // border: yellow 4px solid;
+        justify-content: space-between;
+        gap: 15px;
+      }
+
+      &__video {
+        width: 806.7px;
+        min-width: 806.7px;
+        position: relative;
+        // border: 1px blue solid;
+
+        video {
+          width: 100%;
+          height: auto;
+        }
+
+        &--para {
+          // border: 1px red solid;
+          position: absolute;
+          z-index: +1;
+          top: 80px;
+          left: 70px;
+          max-width: 100px;
+          height: 300px;
+          background-color: var(--gray);
+          color: var(--light);
+          // margin-right: 100px;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-left: 30px;
+
+          gap: 15px;
+
+          h2 {
+            // border: 1px blue dotted;
+            width: 200px;
+          }
+
+          p {
+            // border: 1px blue dotted;
+            width: 200px;
+          }
+        }
+      }
+      &__ceo {
+        // border: 1px red dotted;
+
+        background-image: url(../../images/ceo111.jpg);
+        width: 408.3px;
+        min-width: 408.3px;
+        position: relative;
+        height: 453px;
+        margin-top: 0;
+        background-repeat: no-repeat;
+        // padding: 20px;
+        color: var(--light);
+
+        &--text {
+          background-color: var(--gamma);
+          opacity: 0.5;
+          position: absolute;
+          bottom: 0;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: 220px;
+          padding-left: 30px;
+          padding-right: 30px;
+          gap: 15px;
+        }
+      }
+
+      &__pics {
+        display: flex;
+        // border: 3px orange solid;
+        justify-content: space-between;
+        height: 465px;
+      }
+
+      &__weld {
+        height: 453px;
+
+        &--container {
+          // border: 2px blue solid;
+          max-width: 395.8px;
+          min-width: 395.8px;
+          height: 233px;
+          margin: 0;
+        }
+
+        &--pic {
+          background-image: url(../../images/weld222.jpg);
+          background-repeat: no-repeat center;
+          background-size: cover;
+          // border: 3px green solid;
+          width: 395.8px;
+          height: 233px;
+        }
+
+        &--par {
+          width: 395.8px;
+          min-width: 395.8px;
+          height: 220px;
+          background-color: var(--gray);
+          color: var(--light);
+        }
+      }
+
+      &__satelite {
+        height: 453px;
+        // border: pink 2px dotted;
+
+        &--container {
+          // border: 2px purple solid;
+          max-width: 395.8px;
+          min-width: 395.8px;
+          height: 233px;
+          margin: 0;
+        }
+
+        &--pic {
+          background-image: url(../../images/satelite333.jpg);
+          // border: 1px blue dotted;
+          background-repeat: no-repeat center;
+          // background-size: cover;
+          width: 395.8px;
+          object-fit: cover;
+          height: 233px;
+          margin-top: 7.5px;
+          margin-bottom: 15px;
+          // padding-left: -20px;
+          // margin-bottom: -64px;
+        }
+
+        &--tex {
+          width: 395.8px;
+          min-width: 395.8px;
+          height: 220px;
+          background-color: var(--skills);
+          color: var(--gamma);
+          margin-top: -15px;
+          // border: 1px red dotted;
+        }
+      }
+
+      &__city {
+        height: 453px;
+
+        &--container {
+          // border: 2px orange solid;
+          max-width: 408.3px;
+          min-width: 408.3px;
+          height: 233px;
+          margin: 0;
+        }
+
+        &--pic {
+          background-image: url(../../images/city444.jpg);
+          // border: 1px blue dotted;
+          background-repeat: no-repeat center;
+          background-size: cover;
+          width: 408.3px;
+          // padding-top: 2%;
+        }
+
+        &--pa {
+          width: 408.3px;
+          min-width: 408.3px;
+          height: 220px;
+          background-color: var(--skills);
+          color: var(--gamma);
+          // border: 1px red dotted;
+        }
+      }
+      &__big {
+        display: block;
+      }
+
+      &__small {
+        display: none;
       }
     }
   }
